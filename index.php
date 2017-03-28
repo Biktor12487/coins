@@ -7,6 +7,8 @@
  <?php get_header("Головна",$siteName) ?>
 <section>
 	<div class="container">
-		<?php show_list_country($db) ?>
+		<div class="listCountryCards">
+			<?php show_list_country($db) ?>
+		</div>
 	</div>
 </section>

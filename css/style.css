@@ -156,3 +156,58 @@
 {
 	width: 55%;
 }
+/*Головна*/
+.listCountryCards
+{
+	display: flex;
+}
+.listCountryCards img
+{
+	width: 90%;
+	height: 100px;
+}
+.listCountryCards a
+{
+	width: 25%;
+}
+.cardCountry
+{
+	width:100%;
+	border:1px solid grey;
+	text-align: center;
+}
+.cardCountry h2
+{
+	text-align: center;
+}
+.cardCountry span
+{
+	display: block;
+	text-align: center;
+	width: 100%;
+}
+.listCoinShower
+{
+	display: flex;
+	justify-content: space-around;
+}
+.listCoinShower > a
+{
+	width: 19%;
+	border:1px solid grey;
+}
+.listCoinShower img
+{
+	width: 90%;
+	margin-left: 5%;
+}
+.listCoinShower  h5
+{
+	text-align: center;
+}
+.listCoinShower  span
+{
+	width: 100%;
+	display: block;
+	text-align: center;
+}
