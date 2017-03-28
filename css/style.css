@@ -58,3 +58,101 @@
 	border-bottom: 1px solid grey;
 	padding: 4px;
 }
+.wrap-coins
+{
+	padding: 40px 0;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-wrap: wrap;
+}
+.wrap-coins h2
+{
+	display: block;
+	text-align: center;
+	padding: 20px 0;
+}
+.addCoins form
+{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;	
+	flex-wrap: wrap;
+	font-size: 12px;
+}
+.addCoins textarea
+{
+ 	height: 30px;
+}
+.addCoins *
+{
+	padding: 5px 3px ;
+	min-width: 25%;
+}
+.listCoins
+{
+	max-height: 400px;
+	width: 90%;
+	overflow-y: scroll;
+}
+.rowCoin
+{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	width: 100%;
+	overflow: hidden;
+	padding: 5px 0;
+	border-bottom: 1px solid grey;
+}
+.rowCoin img
+{
+	height: 30px;
+	width: 40px;
+}
+.topPanelListCoin
+{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	width: 100%;
+	padding: 5px 0;
+}
+.editCoins
+{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	justify-content: center;
+}
+.editCoins form
+{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+	width: 50%;
+}
+.editCoins form input
+{
+	width: 50%;
+}
+.editCoins form textarea
+{
+	width: 90%;
+}
+.editCoins form span
+{
+	width: 100%;
+	box-sizing: content-box;
+	text-align: center;
+}
+.editCoins form select
+{
+	width: 50%;
+	margin: 0 25%;
+}
+.editCoins form img
+{
+	width: 55%;
+}
