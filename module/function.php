@@ -48,12 +48,13 @@ function sender_mail($mail,$subject,$text){
 }
 function loadImg($file_name,$dirImg){
 	$uploaddir = "../../bank_img/".$dirImg;
-	$uploadfile = $uploaddir . md5(time()) . basename($_FILES[$file_name]['name']);
+	$name = md5(time()) . basename($_FILES[$file_name]['name']);
+	$uploadfile = $uploaddir . $name;
 	if (move_uploaded_file($_FILES[$file_name]['tmp_name'], $uploadfile)) {
 
 	} else {
 	 	return;
 	}
-	return $uploadfile;
+	return $name;
 }
  ?>

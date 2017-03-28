@@ -28,7 +28,7 @@ function list_coins($db){
 		$year = mysqli_fetch_array(mysqli_query($db,"SELECT * FROM year WHERE id='$year_id'"))[1];
 		$country = mysqli_fetch_array(mysqli_query($db,"SELECT * FROM country WHERE id='$country_id'"))[2];
 		$list_html.= '<div class="rowCoin">
-			<img src="'.$row[1].'" alt="">
+			<img src="../../bank_img/coins_img/'.$row[1].'" alt="">
 			<h4>'.$row[2].'</h4>
 			<span>'.$year.'</span>
 			<span>'.$country.'</span>
@@ -47,7 +47,7 @@ function edit_coin($id,$db){
 		echo '	<h2 class="title">Редагувати</h2>
 				<div class="editCoins">
  				<form action="" method="post"  enctype="multipart/form-data">
- 					<img src="'.$row[1].'" alt="">
+ 					<img src="../../bank_img/coins_img/'.$row[1].'" alt="">
  					<input type="file" name="img_coin" accept="image/jpg, image/JPG,image/JPEG, image/jpeg" >
  					<span>Назва</span>
  					<input type="text" name="title_coin" placeholder="Назва Монети" value="'.$row[2].'" required>

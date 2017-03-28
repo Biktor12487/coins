@@ -4,7 +4,7 @@ function list_country($db){
 	$list_html = "";
 	while ($row =  mysqli_fetch_array($query)) {
 		$list_html.='<div class="rowCountry">
-			<img src="'.$row[1].'" alt="">
+			<img src="../../bank_img/country_icon/'.$row[1].'" alt="">
 			<h3>'.$row[2].'</h3>
 			<a href="?del_country='.$row[0].'">Видалити</a>
 		</div>';
