@@ -1,0 +1,60 @@
+*
+{
+	margin: 0;
+	padding: 0;
+	outline: 0;
+}
+.section
+{
+	width: 100%;
+	float: left;
+	clear: both;
+}
+.container
+{
+	width: 960px;
+	margin:0 auto;
+}
+/*Админка*/
+.wrap-add-country
+{
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+.wrap-add-country form
+{
+	width: 80%;
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	align-items: center;
+	margin: 20px 0;
+}
+.wrap-add-country h2
+{
+	display: block;
+	min-width: 100%;
+	float: left;
+	clear: both;
+	text-align: center;
+}
+.listCountry
+{
+	width: 80%;
+	max-height: 200px;
+	overflow-y: scroll;
+}
+.rowCountry img
+{
+	width: 40px;
+	height: 30px;
+}
+.rowCountry
+{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	border-bottom: 1px solid grey;
+	padding: 4px;
+}
