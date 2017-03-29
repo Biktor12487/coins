@@ -18,8 +18,8 @@
  		refresh($siteName.'page/admin/');
  	}
  	if (isset($_POST['add_coin'])) {
- 		$title = $_POST['title_coin'];
- 		$about = $_POST['about_coin'];
+ 		$title =sql_save($_POST['title_coin']);
+ 		$about =sql_save($_POST['about_coin']);
  		$year = $_POST['year_coin'];
  		$country = $_POST['country_coin'];
  		add_coins("img_coin",$title,$about,$year,$country,$db);

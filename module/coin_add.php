@@ -66,8 +66,8 @@ function edit_coin($id,$db){
  			</div>';
 	}
 	if (isset($_POST['edit_coin'])) {
-		$title = $_POST['title_coin'];
- 		$about = $_POST['about_coin'];
+		$title = sql_save($_POST['title_coin']);
+ 		$about = sql_save($_POST['about_coin']);
  		$year = $_POST['year_coin'];
  		$country = $_POST['country_coin'];
  		$imgLink = loadImg('img_coin','coins_img/');

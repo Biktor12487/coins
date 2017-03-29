@@ -4,7 +4,15 @@
 	padding: 0;
 	outline: 0;
 }
-.section
+@font-face{
+	font-family: Roboto;
+	src:url("http://localhost/coins/css/fonts/Roboto.ttf");
+}
+@font-face{
+	font-family: OpenSans;
+	src:url("http://localhost/coins/css/fonts/OpenSans.ttf");
+}
+section
 {
 	width: 100%;
 	float: left;
@@ -160,6 +168,9 @@
 .listCountryCards
 {
 	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	align-items: center;
 }
 .listCountryCards img
 {
@@ -168,7 +179,9 @@
 }
 .listCountryCards a
 {
-	width: 25%;
+	width: 22%;
+	text-decoration: none;
+	margin-top: 10px;
 }
 .cardCountry
 {
@@ -179,12 +192,22 @@
 .cardCountry h2
 {
 	text-align: center;
+	font: 700 24px Roboto;
+	color: #0C220B;
+	padding: 5px 0;
 }
 .cardCountry span
 {
 	display: block;
 	text-align: center;
 	width: 100%;
+	background-image: url('http://localhost/coins/images/coin_count.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position:60px center;
+	padding: 5px 0;
+	font: 700 14px OpenSans;
+	color: #000;
 }
 .listCoinShower
 {
@@ -223,4 +246,55 @@
 	min-width: 90%;
 	margin:10px auto;
 	display: block;
+}
+/*footer*/
+.footer
+{
+	display: flex;
+	justify-content: space-around;
+	padding:60px 0;	
+	
+}
+.footer >div > div
+{
+	font:600 12px OpenSans;
+}
+.footer h3
+{
+	font: 700 18px Roboto;
+	padding-bottom: 5px;
+}
+.footer > div
+{
+	min-width: 20%;
+	max-width: 30%;
+}
+.footer a
+{
+	text-decoration: none;
+}
+.copyright
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: OpenSans;
+}
+.sortPanel
+{
+	width: 100%;
+	clear: both;
+	float: left;
+}
+.sortPanel a
+{
+	float: right;
+	margin-right: 10px;
+	text-decoration: none;
+	font: 700 19px Roboto;
+	color: #000;
+}
+.sortPanel a:hover
+{
+	text-decoration: underline;
 }

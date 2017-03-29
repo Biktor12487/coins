@@ -2,6 +2,7 @@
 session_start();
  include "module/function.php";
 	  include "module/header.php";
+	  include "module/footer.php";
 	  include "module/show_country.php";
 	  include "config.ini";
 	  include "module/log_reg.php";
@@ -24,12 +25,16 @@ session_start();
  			} ?>
  	</div>
  </section>
-<section>
-	<div class="container">
-		<div class="sortPanel">
+ <section>
+ 	<div class="container">
+ 		<div class="sortPanel">
 			<a href="?country_sort">За країнами</a>
 			<a href="?year_sort">За роками</a>
 		</div>
+ 	</div>
+ </section>
+<section>
+	<div class="container">
 		<div class="listCountryCards">
 			<?php if (isset($_GET["year_sort"])) {
 				show_list_year($db);
@@ -40,3 +45,4 @@ session_start();
 		</div>
 	</div>
 </section>
+<?php get_footer(); ?>
