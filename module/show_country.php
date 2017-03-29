@@ -11,4 +11,16 @@
 			</div></a>';
 		}
 	}
+	function show_list_year($db){
+		$query = mysqli_query($db,"SELECT* FROM year");
+		while ($row = mysqli_fetch_array($query)) {
+			$id_year = $row[0];
+			$count = mysqli_num_rows(mysqli_query($db,"SELECT * FROM coins WHERE year='$id_year'"));
+			echo '<a href="page/year/index.php?year='.$row[0].'"><div class="cardCountry">
+				<h2>'.$row[1].'</h2>
+				<img src="images/year_icon.png" alt="">
+				<span>'.$count.'</span>
+			</div></a>';
+		}
+	}
  ?>
