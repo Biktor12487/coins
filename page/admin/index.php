@@ -23,6 +23,11 @@
  		del_country($id,$db);
  		refresh($siteName.'page/admin/');
  	}
+ 	if (isset($_GET['del_year'])) {
+ 		$id = $_GET['del_year'];
+ 		del_year($id,$db);
+ 		refresh($siteName.'page/admin/');
+ 	}
  	if (isset($_POST['add_coin'])) {
  		$title =sql_save($_POST['title_coin']);
  		$about =sql_save($_POST['about_coin']);
@@ -64,7 +69,7 @@
  			</form>
  			<h2 class="title">Список років</h2>
  			<div class="listCountry">
- 				<?php list_Country($db); ?>
+ 				<?php list_year($db); ?>
  			</div>
  		</div>
  	</div>
