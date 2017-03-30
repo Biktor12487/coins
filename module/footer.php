@@ -1,6 +1,6 @@
 <?php 
 function get_footer(){
-echo '<section>
+echo '<section class="section_footer">
 		<div class="container">
 			<div class="footer">
 				<div class="footerFirst">

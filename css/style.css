@@ -188,11 +188,12 @@ section
 	width:100%;
 	border:1px solid grey;
 	text-align: center;
+	padding: 5px;
 }
 .cardCountry h2
 {
 	text-align: center;
-	font: 700 24px Roboto;
+	font: 700 21px Roboto;
 	color: #0C220B;
 	padding: 5px 0;
 }
@@ -205,7 +206,7 @@ section
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position:60px center;
-	padding: 5px 0;
+	padding: 2px 0;
 	font: 700 14px OpenSans;
 	color: #000;
 }
@@ -218,6 +219,7 @@ section
 {
 	width: 19%;
 	border:1px solid grey;
+	text-decoration: none;
 }
 .listCoinShower img
 {
@@ -237,8 +239,14 @@ section
 /*log reg*/
 #log_form
 {
-	max-width: 250px;
+	max-width: 30%;
+	min-width: 25%;
 	display: block;
+	background: #fff;
+	padding: 20px 10px;
+	border-radius: 5px;
+	border:2px dashed #FF981A;
+	opacity: 0.9;
 }
 #log_form >* 
 {
@@ -246,6 +254,39 @@ section
 	min-width: 90%;
 	margin:10px auto;
 	display: block;
+}
+#log_form h3{
+	font: 700 18px Roboto;
+	text-align: center;
+}
+#log_form a
+{
+	font-family: OpenSans;
+	text-decoration: none;
+	color: blue;
+}
+#log_form input[type="submit"]
+{
+	background: blue;
+	color: #fff;
+	max-width: 70%;
+	border-radius: 4px;
+	border:0;
+	font: 700 16px OpenSans;
+	padding: 5px 0;
+	cursor: pointer;
+}
+#log_form input[type="submit"]:hover
+{
+	opacity: 0.8;
+}
+#log_form a:hover
+{
+	text-decoration: underline;
+}
+#log_form span
+{
+	font: 600 14px OpenSans;
 }
 /*footer*/
 .footer
@@ -292,9 +333,115 @@ section
 	margin-right: 10px;
 	text-decoration: none;
 	font: 700 19px Roboto;
-	color: #000;
+	color: #fff;
+	text-shadow: 0 0 1px #fff;
 }
 .sortPanel a:hover
 {
-	text-decoration: underline;
+	opacity: 0.7;
+	color: #D09C35;
+	text-shadow: 0 0 1px #D09C35;
+}
+/*header*/
+.header
+{
+	background-image: rgba(0,0,0,.2);
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	padding: 40px 0;
+}
+.section_header
+{
+	background-image: url("http://localhost/coins/images/header.jpeg");
+	background-attachment: fixed;
+	background-size: 64%;
+	background-repeat: repeat-x;
+	background-position:center top;
+
+}
+.rightSectorHeader
+{
+	min-width: 50%;
+	max-width: 70%;
+}
+.rightSectorHeader h1
+{
+	font: 700 32px Roboto;
+}
+.rightSectorHeader ul
+{
+	list-style: none;
+	font: 700 16px OpenSans;
+}
+.rightSectorHeader hr
+{
+	border:none;
+	border-top: 2px solid grey;
+	max-width: 70%;
+	margin: 40px auto;
+}
+.section_footer
+{
+	background-image: url("http://localhost/coins/images/footer.png");
+	background-size: cover;
+	background-position: center top;
+}
+.sector_card_nav
+{
+	padding: 20px 0 160px  0;
+}
+.sector_change_sort
+{
+	padding: 20px 0;
+	background-color: #3568D0;
+	border-top: 2px solid #fff;
+	border-bottom: 2px solid #fff;
+}
+.cardCoins
+{
+	padding: 5px;
+}
+.cardCoins h5
+{
+	font: 700 21px Roboto;
+	color: #000;
+}
+.cardCoins span
+{
+	font: 700 14px OpenSans;
+	color: #000;
+}
+/*Node coin*/
+.nodeCoin
+{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.nodeCoin img
+{
+	min-width: 30%;
+}
+.nodeCoin .aboutCoin
+{
+	max-width: 50%;
+	padding: 100px 0 0 0;
+}
+.nodeCoin .aboutCoin h2
+{
+	font: 700 28px Roboto;
+	padding-bottom: 20px;
+}
+.nodeCoin .aboutCoin .textCoin
+{
+	font: 400 14px OpenSans;
+}
+
+.nodeCoin .aboutCoin .info
+{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	padding: 40px 0;
 }

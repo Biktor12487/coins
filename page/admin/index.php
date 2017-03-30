@@ -1,6 +1,7 @@
 <?php include "../../module/function.php";
 	  include "../../module/header.php";
 	   include "../../module/add_country.php";
+	   include "../../module/add_year.php";
 	   include "../../module/list_country.php";
 	   include "../../module/coin_add.php";
 	  include "../../config.ini";
@@ -10,6 +11,11 @@
 	if (isset($_POST['add_country'])) {
 		$name =$_POST['name_country'];
  		add_country("img_country",$name,$db);
+ 		refresh($siteName.'page/admin/');
+ 	} 
+ 	if (isset($_POST['add_year'])) {
+		$name =$_POST['name_year'];
+ 		add_year($name,$db);
  		refresh($siteName.'page/admin/');
  	} 
  	if (isset($_GET['del_country'])) {
@@ -38,10 +44,25 @@
  			<h2 class="title">Додати країну</h2>
  			<form action="" method="post"  enctype="multipart/form-data">
  				<input type="file" name="img_country" accept="image/jpg, image/JPG,image/JPEG, image/jpeg" required>
- 				<input type="text" name="name_country" placeholder="Назва країни" required>
- 				<input type="submit" name='add_country' value="Додати">
+ 				<input type="text" name="name_year" placeholder="Назва року" required>
+ 				<input type="submit" name='add_year' value="Додати">
  			</form>
  			<h2 class="title">Список країн</h2>
+ 			<div class="listCountry">
+ 				<?php list_Country($db); ?>
+ 			</div>
+ 		</div>
+ 	</div>
+ </section>
+  <section>
+ 	<div class="container">
+ 		<div class="wrap-add-country">
+ 			<h2 class="title">Додати рік</h2>
+ 			<form action="" method="post"  enctype="multipart/form-data">
+ 				<input type="text" name="name_year" placeholder="Назва року" required>
+ 				<input type="submit" name='add_year' value="Додати">
+ 			</form>
+ 			<h2 class="title">Список років</h2>
  			<div class="listCountry">
  				<?php list_Country($db); ?>
  			</div>

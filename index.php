@@ -6,12 +6,15 @@ session_start();
 	  include "module/show_country.php";
 	  include "config.ini";
 	  include "module/log_reg.php";
+	  include "module/spider.php";
 	  $db = connect_db($hostName,$hostLogin,$hostPass,$dbName);
+	  spider($db);
  ?>
  <?php get_header("Головна",$siteName) ?>
- <section>
+ <section class="section_header">
  	<div class="container">
- 		<?php if (!isset($_SESSION['user_code'])) {
+ 		<div class="header">
+ 			<?php if (!isset($_SESSION['user_code'])) {
  			if(log_reg($db) == true){
  				refresh($siteName);
  			};
@@ -23,9 +26,19 @@ session_start();
 	 				refresh($siteName);
 	 			}
  			} ?>
+			<div class="rightSectorHeader">
+				<h1>Lorem Ipsum Ameet Lorem Ipsum Ameet Lorem Ipsum Ameet</h1>
+				<hr>
+				<ul>
+					<li>Any One</li>
+					<li>Any Two</li>
+					<li>Any Three</li>
+				</ul>
+			</div>
+ 		</div>
  	</div>
  </section>
- <section>
+ <section class="sector_change_sort">
  	<div class="container">
  		<div class="sortPanel">
 			<a href="?country_sort">За країнами</a>
@@ -33,7 +46,7 @@ session_start();
 		</div>
  	</div>
  </section>
-<section>
+<section class="sector_card_nav">
 	<div class="container">
 		<div class="listCountryCards">
 			<?php if (isset($_GET["year_sort"])) {
@@ -41,7 +54,8 @@ session_start();
 			}
 			else{
 				show_list_country($db);
-				} ?>
+				} 
+				?>
 		</div>
 	</div>
 </section>
